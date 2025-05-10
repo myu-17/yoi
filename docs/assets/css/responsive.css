@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+@media screen and (max-width: 960px) {
+    .product-area ul {
+        gap: 5%;
+    }
+
+    .product-area ul li {
+        width: 30%;
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    .case-area-sp {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    /* 共通 */
+    h2 .secTitleJp {
+        font-size: clamp(23px, 5vw, 27px);
+    }
+
+    h2 .secTitleEn {
+        font-size: clamp(15px, calc(12px + 0.7vw), 20px);
+    }
+
+    .more-btn a {
+        font-size: clamp(13px, calc(10px + 0.6vw), 17px);
+    }
+
+
+    /* fv */
+    .scroll02 {
+        bottom: 1%;
+        left: 34%;
+    }
+
+    video {
+        display: none;
+    }
+
+    .sp-fv-image {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    header .header-logo {
+        width: 50px;
+        left: 25px;
+    }
+
+    .toggle_btn {
+        right: 20px;
+    }
+
+    header .cart {
+        right: 80px;
+    }
+
+    header .video-container .fv-catchcopy {
+        top: 60vw;
+        left: 65%;
+        transform: translate(-50%, -50%);
+        /* 要素の中心を50%の位置に */
+        width: 50%;
+    }
+
+    .swiper {
+        display: none;
+    }
+
+
+    #navArea .menu-shop {
+        left: 56px;
+    }
+
+    #navArea .menu-logo {
+        left: 50px;
+    }
+
+
+    .menu-right {
+        width: 100%;
+    }
+
+
+    /* concept */
+
+    .a-concept-area {
+        position: relative;
+        padding: 0 5% 20%;
+        padding-top: clamp(200px, calc(12.723vw + 152.29px), 250px);
+    }
+
+    .a-concept-container {
+        max-width: none;
+        width: 82%;
+    }
+
+    .a-concept-area .secTitleJp {
+        font-size: clamp(22px, calc(2.799vw + 11.504px), 33px);
+    }
+
+    .a-concept-area .secTitleJp {
+        margin-top: 20px;
+    }
+
+    .a-concept-area h2 .flex02 {
+        gap: 0;
+    }
+
+    .a-concept-area p {
+        font-size: clamp(13px, calc(1.272vw + 8.229px), 18px);
+    }
+
+    .a-concept-area .a-concept-text-box p {
+        margin-bottom: 10%;
+    }
+
+    .a-img-window {
+        display: none;
+    }
+
+    .a-img-lamp {
+        width: clamp(85px, calc(16.539vw + 22.977px), 150px);
+        left: clamp(200px, calc(50.891vw + 9.16px), 400px);
+        bottom: 515px;
+    }
+
+    .a-img-book {
+        position: absolute;
+        width: clamp(130px, calc(17.812vw + 63.206px), 200px);
+        bottom: clamp(-180px, calc(-13.995vw - 72.519px), -125px);
+        right: clamp(170px, calc(58.524vw - 49.466px), 400px);
+    }
+
+    .a-img-lantern {
+        width: 75%;
+        min-width: 200px;
+        margin-top: clamp(200px, calc(38.168vw + 56.87px), 350px);
+    }
+
+    .a-concept-area .a-concept-text-box {
+        margin-top: 5%;
+    }
+
+
+
+
+
+    /* feature */
+    .feature-area .feature-label {
+        display: none;
+    }
+
+    .feature-img {
+        width: 85%;
+    }
+
+    .feature-area ul li {
+        flex-direction: column;
+        max-height: 1200px;
+    }
+
+    .feature-text {
+        width: 70%;
+        margin-top: 5%;
+    }
+
+    .feature-area .number-box {
+        top: -7%;
+    }
+
+    .feature-area .feature-number-large {
+        font-size: 23vw;
+    }
+
+    .feature-number-slash {
+        font-size: 10vw;
+    }
+
+    .feature-area .feature-number {
+        font-size: 7vw;
+    }
+
+
+
+
+
+
+
+    /* product */
+    .product-area ul {
+        gap: 10%;
+    }
+
+    .product-area ul li {
+        width: 45%;
+    }
+
+    /* case */
+    .case-area {
+        display: none;
+    }
+
+    .case-area-right {
+        width: 60%;
+    }
+
+    .case-img {
+        text-align: center;
+        width: 65%;
+    }
+
+    .case-area-sp p {
+        margin: 5% 0;
+    }
+
+
+    /* access */
+    .access-area-wrap {
+        position: static;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .access-area-left {
+        position: static;
+        width: auto;
+        align-self: auto;
+        margin-bottom: 6%;
+    }
+
+    .access-area-right {
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* news */
+    .news-area .section-heading {
+        margin-bottom: 70px;
+    }
+
+
+    .news-area .news-list {
+        flex-direction: column;
+    }
+
+    .news-area ul li:nth-child(2) {
+        margin: 10% 0;
+    }
+
+    .news-area ul li:nth-child(3) {
+        margin-top: 0;
+        margin-right: 15px;
+    }
+
+    .news-area ul li {
+        width: auto;
+    }
+
+    .news-area img {
+        width: 80%;
+    }
+
+
+
+
+
+
+    /* footer */
+
+    .scroll03::after {
+        height: 125px;
+    }
+
+    footer {
+        /* border-top-left-radius: 800px 350px; */
+        /* border-top-right-radius: 800px 350px; */
+        height: 600px;
+        padding: 0 0 5%;
+    }
+
+    footer .footer-left {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 3% 0;
+    }
+
+    footer .footer-left-info {
+        gap: 15px;
+    }
+
+    footer .footer-left>.flex02 {
+        margin: 30% 0 30px;
+    }
+
+
+    footer .footer-right {
+        position: static;
+    }
+
+    footer .footer-right .icon {
+        margin: 25px 0;
+    }
+
+    footer .footer-wrap {
+        flex-direction: column;
+    }
+
+    footer .footer-right ul:nth-child(1) {
+        font-size: 16px;
+    }
+
+    footer nav {
+        font-size: 12px;
+    }
+
+    footer .copyright {
+        position: absolute;
+        bottom: 3%;
+    }
+}
+
+
+@media screen and (max-width: 608px) {
+    .feature-area .scroll {
+        top: 50px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .scroll03::after {
+        height: 100px;
+    }
+}
+
+
+@media screen and (max-width: 401px) {
+    .feature-area .section-heading-wrap {
+        margin-bottom: -3%;
+    }
+}

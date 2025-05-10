@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+:root {
+    --z-index-level-0: -1;
+    --z-index-level-1: 0;
+    --z-index-level-2: 2;
+    --z-index-level-3: 3;
+    --z-index-level-4: 10;
+    --z-index-level-5: 11;
+}
+
+body {
+    background: #09083d;
+    color: #fcfcfc;
+}
+
+/*コンテンツを囲むラッパー要素*/
+.wrap {
+    width: 100%;
+    height: auto;
+    position: relative;
+    /*基準要素、子の基準となる*/
+}
+
+/*アニメーション描画用*/
+canvas {
+    position: absolute;
+    /*親のブロックを基準にして相対位置に配置する*/
+    /*位置指定*/
+    top: 0;
+    right: 0;
+    z-index: var(--z-index-level-0);
+    /*重ね順を-1に　※1以上だとほかのコンテンツの上に被さってしまいます*/
+}
+
+h2 .secTitleEn {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+h2 .secTitleJp {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: clamp(23px, calc(13px + 1.5vw), 36px);
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* font-feature-settings: "palt"; */
+    font-size: clamp(12px, calc(7.5px + 0.6vw), 16px);
+    line-height: 2;
+}
+
+a {
+    color: #fcfcfc;
+}
+
+
+
+
+/* 共通クラスのスタイル */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex02 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.secTitleEn {
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.secTitleEn::before {
+    background-color: #fcfcfc;
+    bottom: -4px;
+    content: "";
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 20px;
+    cursor: pointer;
+}
+
+.more-btn a {
+    position: relative;
+    color: #cca03e;
+    font-size: 17px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+/* 下線のスタイル */
+.more-btn a::after {
+    background-color: #cca03e;
+    bottom: -4px;
+    /* 要素の下端からの距離 */
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform 1s;
+    width: 200%;
+}
+
+/* リンクにホバーした際の下線の表示 */
+a:hover::after {
+    transform-origin: left top;
+    /* 変形の原点を左上に指定 */
+    transform: scale(1, 1);
+    /* 下線を横方向に1倍、縦方向に1倍に変形（表示） */
+}
+
+
+.more-btn a::before {
+    background-color: #cca03e;
+    bottom: -4px;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 200%;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+/* リンクにホバーした際の下線の表示 */
+a:hover::before {
+    display: none;
+}
+
+
+
+
+
+/* !!下記からアニメーションの記述！！ */
+
+/* topに戻るボタン */
+/* .to_top {
+    justify-content: right;
+}
+
+.to_top_item {
+    display: inline-block;
+    transition: 1.5s ease-in-out;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    z-index: var(--z-index-level-4);
+    width: 2%;
+}
+
+
+.is-animation {
+    height: 70px;
+}
+
+.fadeIn_up {
+    opacity: 0;
+    transform: translate(0, 10%);
+    transition: 2s;
+}
+
+.fadeIn_up.is-show {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.fadeIn_left {
+    opacity: 0;
+    transform: translate(-50%, 0);
+    transition: 2s;
+}
+
+.fadeIn_left.is-show {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.fadeIn_right {
+    opacity: 0;
+    transform: translate(50%, 0);
+    transition: 2s;
+}
+
+.fadeIn_right.is-show {
+    transform: translate(0, 0);
+    opacity: 1;
+} */
+
+/* じんわり表示 */
+/* .blur_img {
+    opacity: 0;
+    -moz-transition: -moz-transform 0.5s linear;
+    -webkit-transition: -webkit-transform 0.5s linear;
+    -o-transition: -o-transform 0.5s linear;
+    -ms-transition: -ms-transform 0.5s linear;
+    transition: transform 0.5s linear;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.img-blur {
+    -webkit-animation-name: imageBlur;
+    animation-name: imageBlur;
+    opacity: 1;
+    transition: .8s;
+}
+
+@-webkit-keyframes imageBlur {
+    from {
+        opacity: 0;
+        -webkit-filter: blur(15px);
+        -moz-filter: blur(15px);
+        -ms-filter: blur(15px);
+        -o-filter: blur(15px);
+        filter: blur(15px);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -ms-filter: blur(0px);
+        -o-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@keyframes imageBlur {
+    from {
+        opacity: 0;
+        -webkit-filter: blur(15px);
+        -moz-filter: blur(15px);
+        -ms-filter: blur(15px);
+        -o-filter: blur(15px);
+        filter: blur(15px);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -ms-filter: blur(0px);
+        -o-filter: blur(0px);
+        filter: blur(0px);
+    }
+} */
+
+/* fadeUp */
+
+/* .fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+
+/* .fadeUpTrigger {
+    opacity: 0;
+} */
+
+
+/* その場で */
+/* .fadeIn {
+    animation-name: fadeInAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.fadeInTrigger {
+    opacity: 0;
+}
+
+@keyframes fadeInAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+} */
