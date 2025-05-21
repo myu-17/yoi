@@ -78,7 +78,7 @@
 
 
     #navArea .menu-shop {
-        left: 56px;
+        left: 75px;
     }
 
     #navArea .menu-logo {
@@ -151,11 +151,21 @@
         margin-top: 5%;
     }
 
+    .a-concept-area .more-btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 6%;
+    }
+
 
 
 
 
     /* feature */
+    .feature-area {
+        padding: 0 clamp(19px, calc(14.758vw - 36.344px), 77px);
+    }
+
     .feature-area .feature-label {
         display: none;
     }
@@ -170,7 +180,7 @@
     }
 
     .feature-text {
-        width: 70%;
+        width: clamp(250px, calc(33.079vw + 125.954px), 380px);
         margin-top: 5%;
     }
 
@@ -190,6 +200,10 @@
         font-size: 7vw;
     }
 
+    .feature-area .more-btn {
+        margin-left: 50%;
+    }
+
 
 
 
@@ -206,6 +220,10 @@
     }
 
     /* case */
+    .case-area-sp .section-heading {
+        margin-bottom: 20%;
+    }
+
     .case-area {
         display: none;
     }
@@ -220,11 +238,23 @@
     }
 
     .case-area-sp p {
-        margin: 5% 0;
+        margin: 5% 0 2%;
+    }
+
+    .case-area-sp .more-btn {
+        margin-left: 25%;
     }
 
 
     /* access */
+    .access-area {
+        padding: 0 clamp(37.5px, calc(15.903vw - 22.137px), 100px);
+    }
+
+    .access-area .section-heading {
+        margin-bottom: 6%;
+    }
+
     .access-area-wrap {
         position: static;
         display: flex;
@@ -236,20 +266,29 @@
 
     .access-area-left {
         position: static;
-        width: auto;
-        align-self: auto;
+        width: 100%;
+        /* align-self: auto; */
         margin-bottom: 6%;
+        padding-left: 0;
     }
 
     .access-area-right {
-        width: 70%;
+        width: auto;
         text-align: center;
-        margin: 0 auto;
+        /* margin: 0 auto; */
+    }
+
+    .access-area .info-wrap {
+        padding-left: clamp(0px, calc(17.812vw - 66.794px), 70px);
+    }
+
+    .access-area .more-btn {
+        margin: 5% 0 0 0;
     }
 
     /* news */
     .news-area .section-heading {
-        margin-bottom: 70px;
+        margin-bottom: 50px;
     }
 
 
@@ -263,7 +302,7 @@
 
     .news-area ul li:nth-child(3) {
         margin-top: 0;
-        margin-right: 15px;
+        /* margin-right: 15px; */
     }
 
     .news-area ul li {
@@ -350,6 +389,6 @@
 
 @media screen and (max-width: 401px) {
     .feature-area .section-heading-wrap {
-        margin-bottom: -3%;
+        margin-bottom: 5%;
     }
 }

@@ -260,8 +260,10 @@ nav .inner ul li a:hover {
 
 #navArea .custom-line {
   margin-top: 25px;
-  color: #09083d;
+  background-color: #09083d;
   width: 300px;
+  height: 1px;
+  border: none;
 }
 
 #navArea .nav-icon-wrapper {
@@ -376,7 +378,6 @@ nav .inner ul li a:hover {
 }
 
 .a-concept-area .more-btn {
-  text-align: center;
   justify-self: flex-end;
   margin-right: 18%;
 }
@@ -405,49 +406,6 @@ nav .inner ul li a:hover {
 .a-img-lantern {
   width: 50%;
   margin-top: clamp(300px, calc(38.748vw + 2.027px), 560px);
-}
-
-.concept-area {
-  padding: 12% 100px;
-  background: rgb(80, 8, 93);
-  background: linear-gradient(175deg, rgb(85, 36, 93) 0%, rgba(0, 25, 72, 1) 80%, #09083d);
-}
-
-.concept-wrap {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.concept-area h2 .flex02 {
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0;
-}
-
-.concept-area .concept-text-box {
-  margin-top: 30px;
-  /* padding-left: 35px; */
-}
-
-
-.concept-area .concept-text-box p {
-  /* margin-bottom: 50px; */
-  margin-bottom: clamp(20px, calc(-14px + 4.5vw), 50px);
-}
-
-.concept-area .more-btn {
-  text-align: center;
-  margin-left: 35%;
-}
-
-.concept-area img {
-  max-width: 95%;
-}
-
-.concept-area .lantern {
-  max-width: 700px;
-  width: 70%;
-  margin: 35% 0 7%;
 }
 
 
@@ -686,7 +644,7 @@ nav .inner ul li a:hover {
 
 .feature-area .more-btn {
   text-align: center;
-  margin-left: 20%;
+  margin-left: 40%;
 }
 
 
@@ -889,6 +847,7 @@ nav .inner ul li a:hover {
   position: static;
   width: 100%;
   height: 100%;
+  max-width: 500px;
   object-fit: cover;
   transition-duration: 0.5s;
 }
